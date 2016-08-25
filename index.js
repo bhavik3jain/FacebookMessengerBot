@@ -82,6 +82,7 @@ function sendTextMessage(sender, text) {
     })
 }
 
+//buttons
 function sendGenericMessage(sender) {
     let messageData = {
         "attachment": {
