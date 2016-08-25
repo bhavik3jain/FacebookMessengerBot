@@ -52,7 +52,7 @@ app.listen(app.get('port'), function() {
             sendGenericMessage(sender)
             continue
         }
-		sendTextMessage(sender, "Postback missed "+text.substring(0, 200), token)
+		sendTextMessage(sender, "Postback miised: "+text.substring(0, 200), token)
 		sendTextMessage(sender, text, token)
       }
     }
@@ -99,7 +99,7 @@ function sendGenericMessage(sender) {
                     }, {
                         "type": "postback",
                         "title": "3rd Grade Topics",
-                        "3rd Grade Topics",
+                        "payload": "Payload for first element in a generic bubble",
                     }],
                 },  {
                     "title": "4th Grade Tutorials",
