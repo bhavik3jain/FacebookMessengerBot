@@ -91,9 +91,38 @@ function sendGenericMessage(sender) {
                         "url": "http://www.omiguru.com/3rdGrade/3rdGrade.php",
                         "title": "3rd Grade"
                     }, {
-                        "type": "postback",
+                        "type": "template",
                         "title": "Postback",
-                        "payload": "Payload for first element in a generic bubble",
+												"payload": {
+												"template_type": "generic",
+												"elements": [{
+													"title": "3rd Grade Tutorials",
+													"subtitle": "3rd Grade",
+													"image_url": "http://messengerdemo.parseapp.com/img/rift.png",
+													"buttons": [{
+														"type": "web_url",
+														"url": "http://www.omiguru.com/3rdGrade/3rdGrade.php",
+														"title": "3rd Grade"
+													}, {
+														"type": "template",
+														"title": "Postback",
+														"payload": "Payload for first element in a generic bubble",
+													}],
+												},  {
+													"title": "4th Grade Tutorials",
+													"subtitle": "3rd Grade",
+													"image_url": "http://messengerdemo.parseapp.com/img/rift.png",
+													"buttons": [{
+														"type": "web_url",
+														"url": "http://www.omiguru.com/4thGrade/4thGrade.php",
+														"title": "4th Grade"
+													}, {
+														"type": "postback",
+														"title": "Postback",
+														"payload": "Payload for first element in a generic bubble",
+													}],
+												}]
+											}
                     }],
                 },  {
                     "title": "4th Grade Tutorials",
