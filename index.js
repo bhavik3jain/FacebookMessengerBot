@@ -52,7 +52,7 @@ app.listen(app.get('port'), function() {
             sendGenericMessage(sender)
             continue
         }
-		sendTextMessage(sender, "Postback miised: "+text.substring(0, 200), token)
+		sendTextMessage(sender, "Postback missed: "+text.substring(0, 200), token)
 		sendTextMessage(sender, text, token)
       }
     }
