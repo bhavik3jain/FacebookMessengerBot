@@ -99,7 +99,7 @@ function sendGenericMessage(sender) {
                     }, {
                         "type": "postback",
                         "title": "3rd Grade Topics",
-                        "3rd Grade Topics",
+                        "payload": "Payload for first element in a generic bubble",
                     }],
                 },  {
                     "title": "4th Grade Tutorials",
