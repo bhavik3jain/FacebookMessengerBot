@@ -47,10 +47,11 @@ app.listen(app.get('port'), function() {
       if (event.postback) {
         let text = JSON.stringify(event.postback)
 		sendTextMessage(sender, "Postback received: "+text.substring(0, 200), token)
-        if (text === 'Tutorials') {
+        if (text === '3rd Grade Tutorials') {
             sendGenericMessage(sender)
             continue
         }
+		sendTextMessage(sender, "Postback miised: "+text.substring(0, 200), token)
       }
     }
     res.sendStatus(200)
