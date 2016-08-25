@@ -44,9 +44,14 @@ app.listen(app.get('port'), function() {
         }
         sendTextMessage(sender, "Text received, echo: " + text.substring(0, 200))
       }
-      if (event.postback && event.title === '3rd Grade Tutorials') {
-        sendGenericMessage(sender)
-        continue
+      if (event.postback) {
+        if (event.message && event.message.text) {
+        let text = event.message.text
+        if (text === 'Tutorials') {
+            sendGenericMessage(sender)
+            continue
+        }
+        sendTextMessage(sender, "Text received, echo: " + text.substring(0, 200))
       }
     }
     res.sendStatus(200)
