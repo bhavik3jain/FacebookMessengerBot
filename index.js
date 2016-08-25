@@ -38,7 +38,7 @@ app.listen(app.get('port'), function() {
       let sender = event.sender.id
       if (event.message && event.message.text) {
         let text = event.message.text
-        if (text === 'Generic') {
+        if (text === 'Tutorials') {
             sendGenericMessage(sender)
             continue
         }
@@ -83,12 +83,12 @@ function sendGenericMessage(sender) {
             "payload": {
                 "template_type": "generic",
                 "elements": [{
-                    "title": "First card",
-                    "subtitle": "Element #1 of an hscroll",
+                    "title": "3rd Grade Tutorials",
+                    "subtitle": "3rd Grade",
                     "image_url": "http://messengerdemo.parseapp.com/img/rift.png",
                     "buttons": [{
                         "type": "web_url",
-                        "url": "https://www.messenger.com",
+                        "url": "http://www.omiguru.com/3rdGrade/3rdGrade.php",
                         "title": "web url"
                     }, {
                         "type": "postback",
