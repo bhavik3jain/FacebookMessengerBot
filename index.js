@@ -45,9 +45,13 @@ app.listen(app.get('port'), function() {
         sendTextMessage(sender, "Text received, echo: " + text.substring(0, 200))
       }
       if (event.postback) {
-        let text = JSON.stringify(event.postback)
-        sendTextMessage(sender, "Postback received: "+text.substring(0, 200), token)
-        continue
+        if (event.message && event.message.text) {
+        let text = event.message.text
+        if (text === '3rd Grade Topics') {
+            sendGenericMessage(sender)
+            continue
+        }
+        sendTextMessage(sender, "Text received, echo: " + text.substring(0, 200))
       }
     }
     res.sendStatus(200)
@@ -89,10 +93,10 @@ function sendGenericMessage(sender) {
                     "buttons": [{
                         "type": "web_url",
                         "url": "http://www.omiguru.com/3rdGrade/3rdGrade.php",
-                        "title": "3rd Grade Website"
+                        "title": "3rd Grade Webpage"
                     }, {
                         "type": "postback",
-                        "title": "Topics",
+                        "title": "3rd Grade Topics",
                         "payload": "Payload for first element in a generic bubble",
                     }],
                 },  {
