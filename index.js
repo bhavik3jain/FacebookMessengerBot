@@ -91,7 +91,7 @@ function sendGenericMessage(sender) {
                         "url": "http://www.omiguru.com/3rdGrade/3rdGrade.php",
                         "title": "3rd Grade"
                     }, {
-                        "type": "template",
+                        "type": "postback",
                         "title": "Postback",
                         "payload": "Payload for first element in a generic bubble",
                     }],
